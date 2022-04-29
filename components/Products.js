@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import data from '../data/data.json'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/action'
@@ -11,7 +12,8 @@ export default function Products() {
                 return (
                     <div key={id} className="md:border-0 border-2 border-gray-500 p-4 md:p-0 py-10 flex flex-col md:flex-row space-y-5 gap-20 items-center justify-center">
                         <div className='flex w-full items-center justify-center'>
-                            <img src={val.image} className="h-20 " />
+
+                            <img src={val.image} className="h-20 " alt={val.description}/>
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <p className='text-2xl'> {val.description}</p>
