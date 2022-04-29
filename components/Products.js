@@ -7,13 +7,13 @@ export default function Products() {
     const dispatch = useDispatch()
     return (
         <div className="flex flex-col gap-10 py-5 items-center justify-center px-5">
-            <h2 className='text-center text-2xl'>Available Products</h2>
+            <h2 className='text-center text-2xl md:text-5xl'>Available Products</h2>
             {data.map((val, id) => {
                 return (
                     <div key={id} className="md:border-0 border-2 border-gray-500 p-4 md:p-0 py-10 flex flex-col md:flex-row space-y-5 gap-20 items-center justify-center">
                         <div className='flex w-full items-center justify-center'>
 
-                            <img src={val.image} className="h-20 " alt={val.description}/>
+                            <img src={val.image} className="h-20 " alt={val.description} />
                         </div>
                         <div className='w-full flex flex-col gap-2'>
                             <p className='text-2xl'> {val.description}</p>
