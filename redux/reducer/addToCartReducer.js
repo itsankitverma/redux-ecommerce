@@ -1,11 +1,19 @@
-import { Add_To_Cart, Remove_From_Cart } from "../action";
+import { Add_To_Cart, Remove_From_Cart, User_Name } from "../action";
 
 const initialState = {
-    cart: []
+    cart: [],
+    userName: ''
 }
 
 export const addToCartReducer = (state = initialState, action) => {
     switch (action.type) {
+        case User_Name:
+            const { username } = action.payload
+            return {
+                ...state,
+                userName: username
+            }
+
         case Add_To_Cart:
             const { data, id } = action.payload
             return {

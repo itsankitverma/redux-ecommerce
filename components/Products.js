@@ -4,7 +4,9 @@ import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/action'
 
 export default function Products() {
+
     const dispatch = useDispatch()
+
     return (
         <div className="flex flex-col gap-10 py-5 items-center justify-center px-5">
             <h2 className='text-center text-2xl md:text-5xl'>Available Products</h2>
@@ -18,7 +20,7 @@ export default function Products() {
                         <div className='w-full flex flex-col gap-2'>
                             <p className='text-2xl'> {val.description}</p>
                             <p className='text-xl'> {val.seller}</p>
-                            <p className='text-xl'> <span className='text-4xl'>{val.price}</span> <span className='text-xl line-through'>{val.originalPrice}</span> <span className='text-green-500'>{val.offer}</span> </p>
+                            <p className='text-xl'> <span className='text-4xl'>₹{val.price}</span> <span className='text-xl line-through'>₹{val.originalPrice}</span> <span className='text-green-500'>{val.offer}</span> </p>
                             <div className='block md:hidden'>
                                 <p className='text-lg'>{val.deliveryBy}</p>
                                 <p className='text-lg'>{val.replacementPolicy}</p>
