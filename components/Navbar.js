@@ -13,7 +13,7 @@ const Navbar = () => {
             </div>
             <div className='flex flex-row items-center space-x-3'>
                 <p className='cursor-pointer relative' onClick={() => route.push('/cart')}>
-                    <span className='text-5xl'>🛒</span>
+                    <span className='text-3xl'>🛒</span>
                     <span className=' bg-slate-100 text-black rounded-full h-9 w-9 absolute -top-2 -right-2 '>
                         <span className='text-2xl relative left-[10px] text-center'>{selector}</span>
                     </span>
